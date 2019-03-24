@@ -40,7 +40,7 @@ we go to index 6 and store the count. There are few problems to handle, one is t
 this is handled by storing the counts as negative. Other problem is loosing the element which is replaced by count, 
 this is handled by first storing the element to be replaced at current index.
  *
- *ddd
+ *
  *
  */
 
