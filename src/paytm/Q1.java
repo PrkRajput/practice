@@ -1,5 +1,7 @@
 package paytm;
 
+import java.util.Scanner;
+
 /**
  * package paytm;
  * @author Prakhar Rajput
@@ -48,7 +50,29 @@ public class Q1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+			Scanner s = new Scanner(System.in);
+			long x=0,min=0,ans=99999,i,n;
+			n=s.nextLong();
+			long a[]=new long[n];
+			int b[]=new int[n];
+			for(i=0;i<n;i++) {
+				a[i]=s.nextInt();
+				b[i]=a[i];
+			}
+			for(i=1;i<n;i++) {
+				b[i]*=b[i-1];
+				System.out.println(b[i]);
+			}
+			for(i=0;i<n;i++) {
+				min=b[i]-b[n-1]/b[i];
+				if(min<ans) {
+					ans=min;
+					x=i;
+					
+				}
+			}
+		System.out.println(x);	
+			
 	}
 
 }

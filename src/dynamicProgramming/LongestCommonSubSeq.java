@@ -33,6 +33,8 @@ public class LongestCommonSubSeq {
 		Scanner sc = new Scanner(System.in);
 		String str1 = sc.nextLine();
 		String str2 = sc.nextLine();
+		int as = sc.nextInt();
+		System.out.println();
 		
 		char arr1[] = str1.toCharArray();
 		char arr2[] = str2.toCharArray();
@@ -51,7 +53,6 @@ public class LongestCommonSubSeq {
 					
 			}
 		}*/
-		lcs()
 		
 		
 		
