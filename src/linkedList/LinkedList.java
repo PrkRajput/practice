@@ -48,7 +48,7 @@ public class LinkedList {
 		return list;
 	}
 
-/////////////////////// INSERT AT INDEX   ///////////////////////////////////////////
+/////////////////////// INSERT AT INDEX ///////////////////////////////////////////////
 	public LinkedList insertAtIndex(LinkedList list, int data, int index) {
 			if(index==0){
 				insertAtBegining(list, data);
