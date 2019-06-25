@@ -24,6 +24,9 @@ public class DriverClass {
 		BinaryTree.printInorder(tree.root);
 		System.out.println("\n\n POSTORDER TRAVERSAL ");
 		BinaryTree.printPostorder(tree.root);
+		
+		int sum = BinaryTree.sumAtK(tree.root, 4, 0);
+		System.out.println("\n\n Sum :"+sum );
 
 
 	}

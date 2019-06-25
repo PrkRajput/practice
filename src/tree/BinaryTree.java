@@ -66,7 +66,6 @@ public class BinaryTree {
         	 return;
         }
             
-
         printBinaryTree2D(root.right, level+1);
         if(level!=0){
             for(int i=0;i<level-1;i++)
@@ -87,7 +86,7 @@ public class BinaryTree {
     	printPreorder(root.left);
     	printPreorder(root.right);
     }
-//////////////////////////////////DISPLAY TREE INORDER /////////////////////////////////
+////////////////////////////////// DISPLAY TREE INORDER /////////////////////////////////
     public static void printInorder(Node root){
 
     		if(root==null)
@@ -96,15 +95,41 @@ public class BinaryTree {
     		System.out.print("->"+root.data);
     		printInorder(root.right);
     }
-//////////////////////////////////DISPLAY TREE INORDER /////////////////////////////////
+////////////////////////////////// DISPLAY TREE INORDER /////////////////////////////////
 	public static void printPostorder(Node root){
 	
 			if(root==null)
-			return;
+				return;
 			printPostorder(root.left);			
 			printPostorder(root.right);
 			System.out.print("->"+root.data);
-	}    
-    
-    
+	}
+///////////////////////////////// SUM OF NODES AT LEVEL K ////////////////////////////////
+	public static int sumAtK(Node root, int k, int sum){
+		if(root!=null){
+			if(k==0)
+				return root.data;
+			else if(k<0)
+				return 0;
+			else{
+				sum=sumAtK(root.left, k-1, sum)+sumAtK(root.right, k-1, sum);
+				return sum;
+			}			
+		}
+		else
+			return 0;		
+	}	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
