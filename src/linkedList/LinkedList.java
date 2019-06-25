@@ -3,7 +3,7 @@ package linkedList;
 public class LinkedList {
 	Node head = null;
 	int size=0;
-/////////////////// INSERT AT END	//////////////////////////////////////////////
+///////////////////////////// INSERT AT END	////////////////////////////////////////////
 	public LinkedList insertAtEnd(LinkedList list, int data) {
 		Node node = new Node(data);
 		if (list.head == null) {
@@ -48,7 +48,7 @@ public class LinkedList {
 		return list;
 	}
 
-/////////////////////// INSERT AT INDEX   ///////////////////////////////////////////
+/////////////////////// INSERT AT INDEX ///////////////////////////////////////////////
 	public LinkedList insertAtIndex(LinkedList list, int data, int index) {
 			if(index==0){
 				insertAtBegining(list, data);
