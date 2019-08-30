@@ -17,7 +17,7 @@ public class Driver {
 		list.add(e2);
 		list.add(e3);		
 		list = list.stream().filter(x -> x.getSalary()>4000).collect(Collectors.toList());
-		
+		// test push
 		System.out.println();
 	}
 }
