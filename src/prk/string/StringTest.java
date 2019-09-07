@@ -7,9 +7,9 @@ public class StringTest {
 		System.out.println("String");
 	}
 
-	/*
-	 * public void foo(StringBuffer sb){ System.out.println("StringBuffer"); }
-	 */
+	
+	  public void foo(StringBuffer sb){ System.out.println("StringBuffer"); }
+	 
 
 	public static void main(String[] args) {
 		// Test test = new Test();
