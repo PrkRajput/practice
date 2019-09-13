@@ -1,6 +1,8 @@
 package dynamicProgramming;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -36,9 +38,6 @@ public class PossibleNoSum134 {
 		}
 		System.out.println(dp.get(i-1));
 		sc.close();
-		
-		
-		
-	}
+					}
 
 }

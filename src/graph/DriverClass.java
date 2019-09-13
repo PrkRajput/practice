@@ -6,7 +6,7 @@ import java.util.List;
 public class DriverClass {
 
 	public static void main(String[] args) {
-		// Input: List of edges in a weighted digraph (as per above diagram)
+		// Input: List of edges in a weighted di graph (as per above diagram)
 				// tuple (x, y, w) represents an edge from x to y having weight w
 				List<Edge> edges = Arrays.asList(new Edge(0, 1, 6), new Edge(1, 2, 7),
 												new Edge(2, 0, 5), new Edge(2, 1, 4),
