@@ -77,13 +77,13 @@ public class LongestCommonSubSeq {
 		return L[m][n];
 	}
 	
-	public static String lcsRecurWithString(char[] arr1, char[] arr2, int m, int n) {
+	/*public static String lcsRecurWithString(char[] arr1, char[] arr2, int m, int n) {
 		if (m == 0 || n == 0)
 			return 0;
 		if (arr1[m - 1] == arr2[n - 1]) {
 			return 1 + lcsRecur(arr1, arr2, m - 1, n - 1);
 		} else
 			return Math.max(lcsRecur(arr1, arr2, m, n - 1), lcsRecur(arr1, arr2, m - 1, n));
-	}
+	}*/
 
 }
