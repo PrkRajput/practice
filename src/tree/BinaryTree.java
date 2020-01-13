@@ -70,7 +70,7 @@ public class BinaryTree {
         if(level!=0){
             for(int i=0;i<level-1;i++)
                 System.out.print("|\t");
-                System.out.println("|-------"+root.data);
+                System.out.println("|------->"+root.data);
         }
         else
             System.out.println(root.data);
@@ -95,7 +95,7 @@ public class BinaryTree {
     		System.out.print("->"+root.data);
     		printInorder(root.right);
     }
-////////////////////////////////// DISPLAY TREE INORDER /////////////////////////////////
+////////////////////////////////// DISPLAY TREE POSTORDER /////////////////////////////////
 	public static void printPostorder(Node root){
 	
 			if(root==null)
@@ -118,18 +118,33 @@ public class BinaryTree {
 		}
 		else
 			return 0;		
-	}	
+	}
+
+/////////////////////////////// FIND MINIMUM ///////////////////////////////////////////////
+	public static int minimum(Node root){
+		Node temp = root;	
+		while(true){
+				if(temp.left!=null)
+					temp=temp.left;
+				else
+					return temp.data;
+			}		
+	}
+	
+/////////////////////////////// FIND MAXIMUM /////////////////////////////////////////////////////////	
+	public static int maximum(Node root) {
+		Node temp = root;
+		while (true) {
+			if (temp.right != null)
+				temp = temp.right;
+			else
+				return temp.data;
+		}
+	}
+/////////////////////////////// TRIM A TREE WITH A RANGE //////////////////////////////////////////////
+	
+	public static void trim(Node root, int x,int y){
+		
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

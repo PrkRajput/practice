@@ -114,4 +114,16 @@ public class LinkedList {
 			}		
 		return node1.data;
 	}
+
+	////////////////////////////////// GET SIZE OF THE LIST////////////////////////////////// ///////////////////////////////////////
+	public int getSizeOfList(LinkedList list) {
+		Node node1 = list.head;
+		int size=0;
+		while (node1 != null) {
+			node1 = node1.next;	
+			size++;
+		}
+		return size;
+	}
+
 }
