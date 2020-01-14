@@ -2,7 +2,6 @@ package graph;
 
 class Edge {
 		int src, dest, weight;
-
 		Edge(int src, int dest, int weight)
 		{
 			this.src = src;

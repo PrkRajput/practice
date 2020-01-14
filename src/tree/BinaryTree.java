@@ -146,5 +146,83 @@ public class BinaryTree {
 	public static void trim(Node root, int x,int y){
 		
 	}
-}
+/////////////////////////////// DELETE A GIVEN NODE //////////////////////////////////////////////
+	
+	public  Node delNode(Node root, int x) {
+		Node temp = root;
+		if (root == null)
+			return root;
+		if(temp.data==x){
+			if (temp.right != null){
+				Node delTemp = root;
+				root=temp.right;
+				root=addNode(root,temp.left);
+				
+			}
+			else 
+				root=temp.left;
+			return root;
+		}
+		while (true) {
+		
+			if (temp.left!=null && temp.left.data == x) {
+				if (temp.left.right != null) {
+					Node delTemp = temp.left;
+					temp.left = temp.left.right;	
+					if (delTemp.left != null) {
+						root=addNode(root, delTemp.left);						
+					}
+					
+				}
+				else
+					temp.left = temp.left.left;
+				
+				return root;
+			}
+			
+			else if (temp.right!=null && temp.right.data == x) {
+				if (temp.right.right != null) {
+					Node delTemp = temp.right;
+					temp.right = temp.right.right;	
+					if (delTemp.left != null) {
+						addNode(root, delTemp.left);
+					}
+				}
+				else
+					temp.right = temp.right.left;
+				
+				return root;
+			}
 
+			else if (temp.data > x)
+				temp = temp.left;
+			else
+				temp = temp.right;
+		}
+	}
+	
+/////////////////////////////// ADD A GIVEN NODE //////////////////////////////////////////////
+	public Node addNode(Node root, Node x) {
+		Node temp = root;
+		if(temp==null)
+			return root;
+		while (true) {
+			if (temp.data <= x.data) {
+				if (temp.right == null){
+					temp.right = x;
+					break;
+				}
+				else
+					temp = temp.right;
+			} else {
+				if (temp.left == null){
+					temp.left = x;
+					break;
+				}
+				else
+					temp = temp.left;
+			}
+		}
+		return temp;
+	}
+}
