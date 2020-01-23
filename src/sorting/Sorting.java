@@ -9,14 +9,15 @@ public class Sorting {
 		for (int i = 0; i < 10; ++i)
 			System.out.print(arr[i] + ", ");
 		/*
-		 * mergeSort(arr, 0, 9); System.out.println("\nMergeSort array -> ");
+		 * mergeSort(arr, 0, 9); 
+		 * System.out.println("\nMergeSort array -> ");
 		 */
 		quickSort(arr, 0, 9);
 		System.out.println("\nQuickSort array -> ");
 		for (int i = 0; i < 10; ++i)
 			System.out.print(arr[i] + ", ");
 	}
-
+/////////////////////////////////////////  Merge Sort  //////////////////////////////////////////////////////////////
 	public static void mergeSort(int[] arr, int l, int r) {
 		int mid = (l + r) / 2;
 		if (l < r) {
@@ -55,10 +56,10 @@ public class Sorting {
 			arr[k++] = arr2[j++];
 
 	}
-
+/////////////////////////////////////////  quick Sort  //////////////////////////////////////////////////////////////
 	public static int partition(int arr[], int low, int high) {
 		int pivot = arr[high];
-		int i = (low - 1);
+		int i = low - 1;
 		for (int j = low; j < high; j++) {
 
 			if (arr[j] <= pivot) {
@@ -79,12 +80,10 @@ public class Sorting {
 
 	public static void quickSort(int arr[], int low, int high) {
 		if (low < high) {
-
 			int pi = partition(arr, low, high);
-
 			quickSort(arr, low, pi - 1);
 			quickSort(arr, pi + 1, high);
 		}
 	}
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 }

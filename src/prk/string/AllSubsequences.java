@@ -16,6 +16,6 @@ public class AllSubsequences {
 	
 	public static void main(String args[]){
 		printSub("abc","");
-		System.out.println("break");
+		//System.out.println("break");
 	}
 }

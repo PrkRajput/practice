@@ -31,7 +31,7 @@ public class Graph {
 			int src = 0;
 			int n = graph.adj.size();
 
-			while (src < n)			{
+			while (src < n)	{
 				// print current vertex and all its neighboring vertices
 				for (Node edge : graph.adj.get(src))
 					System.out.print(src + " -> " + edge.value + " (" + edge.weight + ")\t");

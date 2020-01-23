@@ -16,12 +16,12 @@ public class DriverClass {
 		tree = tree.addToBST(tree,1);
 		tree = tree.addToBST(tree,17);
 		tree = tree.addToBST(tree,18);
-		tree = tree.addToBST(tree,-3);
+		//tree = tree.addToBST(tree,-3);
 		tree = tree.addToBST(tree,25);
 		tree = tree.addToBST(tree,16);
 		tree = tree.addToBST(tree,9);
 		tree = tree.addToBST(tree,10);
-				
+		
 		BinaryTree.printBinaryTree2D(tree.root,1);
 		/*System.out.println("\n\n PREORDER TRAVERSAL ");
 		BinaryTree.printPreorder(tree.root);
@@ -34,9 +34,12 @@ public class DriverClass {
 		System.out.println("\n\n Sum :"+sum );		
 		System.out.println("\n\n\n Minimum value ->"+BinaryTree.minimum(tree.root));
 		System.out.println("\n\n\n Maximum value ->"+BinaryTree.maximum(tree.root));*/
-		tree.root=tree.delNode(tree.root,20);
-		System.out.println("\n\n\n\n");
-		BinaryTree.printBinaryTree2D(tree.root,1);
+		//tree.root=tree.delNode(tree.root,20);
+		System.out.println("\n\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+		//BinaryTree.printBinaryTree2D(tree.root,1);
+		
+		System.out.println(BinaryTree.maxHeight(tree.root));
+		System.out.println(BinaryTree.sumAtK(tree.root, 5, 0));
 
 	}
 

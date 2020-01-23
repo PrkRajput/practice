@@ -119,6 +119,17 @@ public class BinaryTree {
 		else
 			return 0;		
 	}
+	
+	///////////////////////////////// MAX HEIGHT OF A TREE /////////////////////////////////// 
+	public static int maxHeight(Node root) {
+		if (root != null) {
+			if(root.left==null && root.right==null)
+				return 1;
+			else
+				return Math.max(maxHeight(root.left),maxHeight(root.right))+1;			
+		} else
+			return 0;
+	}	
 
 /////////////////////////////// FIND MINIMUM ///////////////////////////////////////////////
 	public static int minimum(Node root){
