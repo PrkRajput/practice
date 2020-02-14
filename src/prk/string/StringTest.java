@@ -33,11 +33,11 @@ public class StringTest {
 		  System.out.println(s3==s2);
 		  System.out.println(s1==s4);
 		 
-		// Whenever it finds string it converts all the later variables to String ;
-		/*System.out.println('a');
+		// Whenever it finds string it converts all the later variables to String
+		System.out.println('a');
 		System.out.println('a' + 'b');
 		System.out.println("H" + 'a' + 'b');
 		System.out.println('a' + 'b' + "H");
-		System.out.println(12 + 'a' + 'b' + "H" + 'a' + 'b' + 12);*/
+		System.out.println(12 + 'a' + 'b' + "H" + 'a' + 'b' + 12);
 	}
 }

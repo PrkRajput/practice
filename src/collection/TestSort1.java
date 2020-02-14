@@ -32,8 +32,5 @@ public class TestSort1 {
 		System.out.println(Arrays.toString(str));
 		*/
 		
-		 HashMap<Integer, Integer> map = new HashMap<>();
-		 
-		 map.get
 	}
 }

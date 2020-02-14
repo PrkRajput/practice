@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Graph {
-	// A list of lists to represent adjacency list
+///////// A list of lists to represent adjacency list
 		List<List<Node>> adj = new ArrayList<>();
 		
 //////////////////////// Constructor to construct graph //////////////////////////////
@@ -25,7 +25,7 @@ public class Graph {
 				// adj.get(e.dest).add(new Node(e.src, e.weight));
 			}
 		}
-////////////////// print adjacency list representation of graph
+////////////////// print adjacency list representation of graph //////////////////////
 		public void printGraph(Graph graph)
 		{
 			int src = 0;
@@ -39,4 +39,11 @@ public class Graph {
 				src++;
 			}
 		}
+		
+////////////////// Breadth First Search of graph ///////////////////////////////////////
+		public void bfsGraph(Graph graph){
+			
+		}
+		
+		
 }
