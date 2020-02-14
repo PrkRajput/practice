@@ -1,7 +1,9 @@
 package graph;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Graph {
 ///////// A list of lists to represent adjacency list
@@ -41,9 +43,33 @@ public class Graph {
 		}
 		
 ////////////////// Breadth First Search of graph ///////////////////////////////////////
-		public void bfsGraph(Graph graph){
+		public void bfsGraph(Graph graph,int src){
+			
+			boolean visited[] = new boolean[adj.size()];
+			LinkedList<Integer> queue = new LinkedList<>();
+			
+			visited[src] = true;
+			queue.add(src);
+			
+			while(queue.size()!=0){
+				src = queue.poll();
+				System.out.println(src+" ");
+				adj.get(src).stream().filter(x->!visited[x.value]).peek(x->queue.add(x.value)).peek(x->visited[x.value]=true).collect(Collectors.toList());			
+			}
 			
 		}
 		
 		
 }
+
+
+
+
+
+
+
+
+
+
+
+
