@@ -1,21 +1,22 @@
 package recusrion;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Pattern {
 	
 	public static void main(String[] args) {
-		print(5,0,0);
-		List<Integer> list = new ArrayList<>();
-		list.add(1);
-		list.add(2);
-		for(int i : list){
-			System.out.println(i+1);
-		}
+		print(5,1,1);
 	}
 
-	private static void print(int i, int j, int k) {
+	private static void print(int x, int i, int j) {
 		
+		if(i>x)
+			return;
+		if(j>i){
+			System.out.println();
+			print(5,i+1,1);
+		}
+		else{
+			System.out.print("* ");
+			print(5,i,j+1);
+		}			
 	}
 }
